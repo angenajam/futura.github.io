@@ -12,41 +12,67 @@
     body { margin: 0; padding: 0; }
     #map { position: fixed; top: 0; bottom: 0; width: 100%; }
 </style>
+<script>
+    (function(d) {
+    var config = {
+        kitId: 'oal3psp',
+        scriptTimeout: 3000,
+        async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script>
 </head>
 <!--custom styles-->
 <!--<link rel="stylesheet" href="styles.css"-->
 </body>
-    <!--header-->
-    <header class="bg-dark p-2">
-        <h1 class="text-light">Map</h1>
-    </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- the heading for the map page --> 
+<div class="bodyContainerMap">
+    <div class="headingMap">
+        <h1>The Promises and Pitfalls of Major U.S. Cities</h1>
+    </div>
+
    <!--nav bar-->
-    <div class="sidenav">
-     <a href="#">Home</a>
-     <a href="#">Map</a>
-     <a href="#">Impact Page</a>
-     <a href="#">Books</a>
-     <a href="#">About Us</a>
- </div>
+   <div class="navBarContainer"> 
+    <nav class="sidenav">
+        <div class="vl"></div>
+        <div class="logo-container">
+          <img class="logo" src="logo_gender.png" width="70%">
+        </div>
+        <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
+        <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
+        <a style="text-decoration:none" href="impactPageTina.html">IMPACT</a>
+        <a style="text-decoration:none" href="#">TAKE ACTION</a>
+        <a style="text-decoration:none" href="#">BOOKS</a>
+        <a style="text-decoration:none" href="#">ABOUT US</a>
+      </nav>
+</div>
 <main class="p-5">
     <div class="container">
        <div id="map"></div>
 </div>
 <style>
-    h1 {
-      text-align: center;
-      position: fixed;
-      background-color: #111;
-      height: 200px;
-      width: 100%;
-    }    
+    html {
+        font-family: "halyard-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #ecded0;
+    }
+
+    .headingMap {
+            width: 1200px;
+            text-align: center;
+            margin-left: 190px;
+            background-color: #ecded0;
+        }
+
     #map {
         width: 100%;
         height: 90%;
         top: 100px;
         border-radius: 10px;
-        border: 1px solid orange;
+        border: 1px solid #ecded0;
     }
 
     #marker1 {
@@ -83,14 +109,21 @@
     }
 
     .mapboxgl-popup {
-        max-width: 300px;
-        background-color:#111;
+        max-width: 200px;
     }
 
     .mapboxgl-popup-content {
+        background-color: black;
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         color:white;
+    }
+    .mapboxgl-popup-tip {
+        border-top-color: black !important;
+    }
+
+    .mapboxgl-popup-close-button {
+        color: white !important;
     }
 
     .sidenav {
@@ -100,17 +133,37 @@
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #111;
+        background-color: #F8F1EA;
         overflow-x: hidden;
         padding-top: 20px;
         }
 
         .sidenav a {
-        padding: 6px 6px 6px 32px;
-        font-size: 25px;
-        color: #818181;
-        display: block;
+            padding: 20px 6px 6px 32px;
+            font-size: 14px;
+            color: #111010;
+            display: block;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #111010;
+            padding-bottom: 1;
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
+
+        .logo-container {
+            display: block;
+            margin-left: auto;
+            width: 80%;
+        }
+        .vl {
+            border-left: 2px solid #111010;
+            height: 100%;
+            position: absolute;
+            margin-left: 198px;
+            top: 0;
+        }
+
 </style>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiemFocmF3aWJpc2FuYSIsImEiOiJjbHQwNG9yYnIwd2Q5MnFvMjR5dWxqNDRoIn0.gMheQ3adbPQdo_Qtc7r7Ag';
@@ -128,23 +181,23 @@
     });
 
     // create the popup
-    const popup1 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Washington DC'
+    const popup1 = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        '<h6>Washington DC</h6><table><tr><td><span>&#x2717;</span>Walkability  </td><td><span>&#10003;</span>Affordibility  </td></tr><tr><td><span>&#x2717;</span>Accessibility  </td><td><span>&#10003;</span>Accessibility  </td></tr></td><td><span>&#10003;</span>Diversity</table><h6>Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
     );
 
     // create the popup
-    const popup2 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Boston'
+    const popup2 = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        '<h6>Boston, MA</h6><table><tr><td><span>&#10003;</span>Walkability  </td><td><span>&#x2717;</span>Diversity  </td></tr><tr><td><span>&#10003;</span>Sustainability  </td><td><span>&#x2717;</span>Affordability  </td></tr></td><td><span>&#10003;</span>Accessibility</table><h6>Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
     );
 
      // create the popup
-    const popup3 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Philadelphia'
+    const popup3 = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        '<h6>Philadelphia, PA</h6><table><tr><td><span>&#10003;</span>Walkability  </td><td><span>&#x2717;</span>Sustainability  </td></tr><tr><td><span>&#10003;</span>Inclusivity  </td><td><span>&#x2717;</span>Accessibility  </td></tr></td><td><span>&#10003;</span>Diversity</table><h6>Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
     );
 
      // create the popup
-     const popup4 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'San Francisco'
+     const popup4 = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        '<h6>San Francisco, CA</h6><table><tr><td><span>&#10003;</span>Walkability  </td><td><span>&#x2717;</span>Affordabiity  </td></tr><tr><td><span>&#10003;</span>Sustainability  </td><td><span>&#x2717;</span>Accessibility  </td></tr></td><td><span>&#10003;</span>Diversity</table><h6>Potential Imperatives</h6><ul><li>Increase representation of women through art pieces, street names, and building names</li></ul>'
     );
 
 
