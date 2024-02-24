@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- source code from MapBox https://docs.mapbox.com/mapbox-gl-js/example/set-popup/ -->
 <meta charset="utf-8">
 <title>Attach a popup to a marker instance</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -26,9 +27,37 @@ body { margin: 0; padding: 0; }
     .mapboxgl-popup {
         max-width: 200px;
     }
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+        .sidenav a {
+        padding: 6px 6px 6px 32px;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        }
 </style>
+<div class="header">
+    <h1>"Header"</h1>
+</div>
 
 <div id="map"></div>
+<div class="sidenav">
+    <a href="#">Home</a>
+  <a href="#">Map</a>
+  <a href="#">Impact Page</a>
+  <a href="#">Books</a>
+  <a href="#">About Us</a>
+</div>
 
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FuaWFoYXNhbiIsImEiOiJjbHQwNm5oMnQwa2x4MmltbnFlNDR1eXhhIn0.fGPH65FHLWTWBtssI4fZ9Q';
@@ -41,7 +70,7 @@ body { margin: 0; padding: 0; }
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/light-v11',
         center: washington,
-        zoom: 3
+        zoom: 2
     });
 
     // create the popup
