@@ -136,22 +136,24 @@
     });
 
     // create the popup
-    const popup1 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Washington DC'
+    const popup1 = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        '<p>Washington DC</p> <p>walkability<p/>   <p>affordibility<p/>'
     );
 
     // create the popup
-    const popup2 = new mapboxgl.Popup({ offset: 25 }).setText(
+    const popup2 = new mapboxgl.Popup({ offset: 25 }).setHTML(
         'Boston'
     );
 
      // create the popup
-    const popup3 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Philadelphia'
+    const popup3 = new mapboxgl.Popup({ offset: 25 }).setHTML(
+       'Philadelphia, PA'
+
+
     );
 
      // create the popup
-     const popup4 = new mapboxgl.Popup({ offset: 25 }).setText(
+     const popup4 = new mapboxgl.Popup({ offset: 25 }).setHTML(
         'San Francisco'
     );
 
