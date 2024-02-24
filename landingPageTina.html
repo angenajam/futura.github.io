@@ -20,15 +20,26 @@
             background-size: 200% 200%;
         }
         .headingLanding {
-            width: 1000px;
+            width: 100%;
             text-align: center;
-            margin-left: 190px;
+            margin-left: 80px;
+            margin-top: -10px;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            background: #F8F1EA;
+            border-bottom: 3px solid #111010;
+        }
+        .welcomeToFutura {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: -10px;
         }
         .bodyParagraph {
             max-width: 500px;
             text-align: left;
-            margin-left: 500px;
+            margin-left: 580px;
             line-height: 1.8;
+            margin-bottom: 4rem;
         }
         .bottomMsgs {
             width: 1000px;
@@ -99,12 +110,14 @@
                 background-position: 0% 20%;
             }
         }
+
         .text-wrapper h1 {
             font-family: "halyard-display", sans-serif;
             font-weight: 400 !important;
             font-style: normal;
             white-space: nowrap;
-            padding: 0 1rem;
+            padding: 0 1.3rem;
+            text-align: center;
             letter-spacing: 1px;
             animation: move-rtl 6000ms linear infinite;
         }
@@ -113,13 +126,46 @@
             justify-content: flex-start;
             background: #F6C0D9;
             overflow: hidden;
+            border-top: 3px solid #111010;
+            width: 110%;
         }
+
+        .text-wrapper1 h1 {
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400 !important;
+            font-style: normal;
+            white-space: nowrap;
+            padding: 0 1.6rem;
+            text-align: center;
+            letter-spacing: 1px;
+            animation: move-rtl1 6000ms linear infinite;
+        }
+        .text-wrapper1 {
+            display: flex;
+            justify-content: flex-start;
+            background: #F6DDC0;
+            overflow: hidden;
+            border-top: 3px solid #111010;
+            border-bottom: 3px solid #111010;
+            width: 110%;
+        }
+        
+
         @keyframes move-rtl {
             0% {
                 transform: translateX(0);
             }
             100% {
                 transform: translateX(-100%);
+            }
+        }
+
+        @keyframes move-rtl1 {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
             }
         }
     </style>
@@ -138,38 +184,97 @@
 <!-- the heading for the landing page --> 
 <div class="bodyContainer">
     <div class="headingLanding">
-        <img class="logo" src="futuraTextOnly.png" width="15%">
+        <img class="logo" src="futuraTextOnly.png" width="10%">
     </div>
 
     <!-- the body for the landing page -->
     <div class="bodyParagraph">
-        <h1> Welcome to futura </h1>
-            <p>At Futura, our goal is to establish an environment
-                where gender-segregated data is standard practice.
-                Developed by Boston-based university students, we
-                are driven by the potential to bring about enduring
-                transformations in urban planning and design, focusing
-                on elevating awareness about the importance of closing
-                the gender-data gap. The absence of data considering
-                women not only directs us towards a world where environments
-                cater predominantly to men, but also suggests a societal shift
-                where such a reality no longer belongs!</br></br></p>
+        <p class="welcomeToFutura">Welcome to <img class="futuraTextLogo" style="margin-bottom:-18px;"src="futuraTextLogo.png" width="30%"></p>
+        <p>At Futura, our goal is to establish an environment
+            where gender-segregated data is standard practice.
+            Developed by Boston-based university students, we
+            are driven by the potential to bring about enduring
+            transformations in urban planning and design, focusing
+            on elevating awareness about the importance of closing
+            the gender-data gap. The absence of data considering
+            women not only directs us towards a world where environments
+            cater predominantly to men, but also suggests a societal shift
+            where such a reality no longer belongs!</br></br></p>
         <!-- button to the map -->
         <a href="mapSania/mapSania.html" style="text-decoration:none"class="mapBtn">GO TO MAP</a>
     </div>
 
-    <!-- messages near the bottom of the screen -->
-    <div class="bottomMsgs">
-        <p> Reimagining urban design </p>
-        <p> Sustainability & gender equality </p>
+    <div class="marquees">
+        <div class="text-wrapper">
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Reimagining urban design
+            </h1>
+        </div>
+        <div class="text-wrapper1">
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+            <h1>
+                <img class="star1" style="margin-bottom:-8px;" src="star1.png" width="10%">
+                Sustainability & gender equality
+            </h1>
+        </div>
     </div>
 
-    <div class="text-wrapper">
-        <h1>Reimagining urban design</h1>
-        <h1>Reimagining urban design</h1>
-        <h1>Reimagining urban design</h1>
-        <h1>Reimagining urban design</h1>
-    </div>
 </div>
 
 <!-- nav bar -->
@@ -182,7 +287,7 @@
         <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
         <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
         <a style="text-decoration:none" href="impactPageAnge.html">IMPACT</a>
-        <a style="text-decoration:none" href="#">TAKE ACTION</a>
+        <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
         <a style="text-decoration:none" href="#">BOOKS</a>
         <a style="text-decoration:none" href="#">ABOUT US</a>
       </nav>
