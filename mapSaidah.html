@@ -12,6 +12,16 @@
     body { margin: 0; padding: 0; }
     #map { position: fixed; top: 0; bottom: 0; width: 100%; }
 </style>
+<script>
+    (function(d) {
+    var config = {
+        kitId: 'oal3psp',
+        scriptTimeout: 3000,
+        async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script>
 </head>
 <!--custom styles-->
 <!--<link rel="stylesheet" href="styles.css"-->
@@ -20,7 +30,7 @@
   <!-- the heading for the map page --> 
 <div class="bodyContainerMap">
     <div class="headingMap">
-        <h1>Map</h1>
+        <h1>The Promises and Pitfalls of Major U.S. Cities</h1>
     </div>
 
    <!--nav bar-->
@@ -49,17 +59,12 @@
         font-style: normal;
         background-color: #ecded0;
     }
-    h1 {
-      text-align: center;
-      margin-left: 190;
-      width: 1000px;
-
-    }
 
     .headingMap {
-            width: 1000px;
+            width: 1200px;
             text-align: center;
             margin-left: 190px;
+            background-color: #ecded0;
         }
 
     #map {
@@ -67,7 +72,7 @@
         height: 90%;
         top: 100px;
         border-radius: 10px;
-        border: 1px solid orange;
+        border: 1px solid #ecded0;
     }
 
     #marker1 {
@@ -133,12 +138,6 @@
         padding-top: 20px;
         }
 
-        .headingLanding {
-            width: 1000px;
-            text-align: center;
-            margin-left: 170px;
-        }
-
         .sidenav a {
             padding: 20px 6px 6px 32px;
             font-size: 14px;
@@ -156,6 +155,13 @@
             display: block;
             margin-left: auto;
             width: 80%;
+        }
+        .vl {
+            border-left: 2px solid #111010;
+            height: 100%;
+            position: absolute;
+            margin-left: 198px;
+            top: 0;
         }
 
 </style>
