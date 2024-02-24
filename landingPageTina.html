@@ -25,9 +25,10 @@
             margin-left: 190px;
         }
         .bodyParagraph {
-            width: 1000px;
-            text-align: center;
-            margin-left: 190px;
+            max-width: 500px;
+            text-align: left;
+            margin-left: 500px;
+            line-height: 1.8;
         }
         .bottomMsgs {
             width: 1000px;
@@ -42,7 +43,11 @@
             border: 2px solid black !important;
             padding: 10px 20px 10px 20px !important;
             border-radius: 50px !important;
-            font-size: 20px !important;
+            font-size: 18px !important;
+        }
+        .mapBtn:hover {
+            background-color: black !important;
+            color: white !important;
         }
         .sidenav {
             height: 100%;
@@ -94,6 +99,29 @@
                 background-position: 0% 20%;
             }
         }
+        .text-wrapper h1 {
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400 !important;
+            font-style: normal;
+            white-space: nowrap;
+            padding: 0 1rem;
+            letter-spacing: 1px;
+            animation: move-rtl 6000ms linear infinite;
+        }
+        .text-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            background: #F6C0D9;
+            overflow: hidden;
+        }
+        @keyframes move-rtl {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 
 <script>
@@ -116,23 +144,31 @@
     <!-- the body for the landing page -->
     <div class="bodyParagraph">
         <h1> Welcome to futura </h1>
-            <p>placeholder<br>placeholder<br>placeholder 
-            <br>placeholder<br>placeholder
-            <br>placeholder<br>placeholder
-            <br>placeholder<br>placeholder
-            <br>placeholder<br>placeholder
-            </p>
+            <p>At Futura, our goal is to establish an environment
+                where gender-segregated data is standard practice.
+                Developed by Boston-based university students, we
+                are driven by the potential to bring about enduring
+                transformations in urban planning and design, focusing
+                on elevating awareness about the importance of closing
+                the gender-data gap. The absence of data considering
+                women not only directs us towards a world where environments
+                cater predominantly to men, but also suggests a societal shift
+                where such a reality no longer belongs!</br></br></p>
         <!-- button to the map -->
-        <a href="mapSania/mapSania.html" class="mapBtn"> 
-        <button>GO TO MAP</button>
-        </a>
-
+        <a href="mapSania/mapSania.html" style="text-decoration:none"class="mapBtn">GO TO MAP</a>
     </div>
 
     <!-- messages near the bottom of the screen -->
     <div class="bottomMsgs">
         <p> Reimagining urban design </p>
         <p> Sustainability & gender equality </p>
+    </div>
+
+    <div class="text-wrapper">
+        <h1>Reimagining urban design</h1>
+        <h1>Reimagining urban design</h1>
+        <h1>Reimagining urban design</h1>
+        <h1>Reimagining urban design</h1>
     </div>
 </div>
 
@@ -145,7 +181,7 @@
         </div>
         <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
         <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
-        <a style="text-decoration:none" href="impactPageTina.html">IMPACT</a>
+        <a style="text-decoration:none" href="impactPageAnge.html">IMPACT</a>
         <a style="text-decoration:none" href="#">TAKE ACTION</a>
         <a style="text-decoration:none" href="#">BOOKS</a>
         <a style="text-decoration:none" href="#">ABOUT US</a>

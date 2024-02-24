@@ -2,6 +2,12 @@
 <html>
 <head>
     <style>
+        html {
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: #F8F1EA;
+        }
          .headingImpact {
             width: 1000px;
             text-align: center;
@@ -12,6 +18,7 @@
             width: 1000px;
             text-align: left;
             margin-left: 200px;
+            color: #B2ABA4;
         }
         .genderDataImpact {
             width: 1000px;
@@ -67,6 +74,7 @@
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 1px;
             margin-left: 200px;
+            color: #B2ABA4;
         }
         .imageheader2 {
             float: center;
@@ -78,6 +86,7 @@
             width: 1000px;
             text-align: left;
             margin-left: 200px;
+            color: #B2ABA4;
         }
 
         .vl {
@@ -88,6 +97,17 @@
             top: 0;
         }
     </style>
+
+    <script>
+        (function(d) {
+        var config = {
+            kitId: 'oal3psp',
+            scriptTimeout: 3000,
+            async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
 
 </head>
 
@@ -170,12 +190,12 @@
         <div class="logo-container">
            <img class="logo" src="logo_gender.png" width="70%">
         </div>
-            <a href="landingPageTina.html">HOME</a>
-            <a href="mapSania/mapSania.html">MAP</a>
-            <a href="impactPageAnge.html">IMPACT PAGE</a>
-            <a href="takeActionAnge.html">TAKE ACTION</a>
-            <a href="booksAnge.html">BOOKS</a>
-            <a href="aboutFuturaAnge.html">ABOUT FUTURA</a>
+            <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
+            <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
+            <a style="text-decoration:none" href="impactPageAnge.html">IMPACT PAGE</a>
+            <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
+            <a style="text-decoration:none" href="booksAnge.html">BOOKS</a>
+            <a style="text-decoration:none" href="aboutFuturaAnge.html">ABOUT FUTURA</a>
     </nav>
 </div>
 

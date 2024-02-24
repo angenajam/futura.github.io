@@ -2,6 +2,12 @@
 <html>
 <head>
     <style>
+        html {
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: #F8F1EA;
+        }
          .headingBooks {
             width: 1000px;
             text-align: center;
@@ -15,19 +21,19 @@
             column-gap: 1px; 
         }
         .booksBody1 {
-            width: 100px;
+            width: 200px;
             text-align: center;
             margin-left: 200px;
         }
 
         .booksBody2 {
-            width: 100px;
+            width: 200px;
             text-align: center;
             margin-left: 200px;
         }
 
         .booksBody3 {
-            width: 100px;
+            width: 200px;
             text-align: center;
             margin-left: 200px;
         }
@@ -70,9 +76,33 @@
             top: 0;
         }
 
+        .booksBtn {
+            background-color: #FABE84 !important;
+            color: black !important;
+            letter-spacing: 3px !important;
+            border: 2px solid black !important;
+            padding: 10px 20px 10px 20px !important;
+            border-radius: 50px !important;
+            font-size: 18px !important;
+        }
+        .booksBtn:hover {
+            background-color: black !important;
+            color: white !important;
+        }
+
         
     </style>
 
+    <script>
+        (function(d) {
+        var config = {
+            kitId: 'oal3psp',
+            scriptTimeout: 3000,
+            async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
 </head>
 
 <!-- the heading for the impact page --> 
@@ -91,8 +121,7 @@
              <p>  Charles Montgomery
              </p>
              <!-- button to link -->
-            <a href="https://www.amazon.com/Happy-City-Transforming-Through-Design-ebook/dp/B009LRWHPY" class="infoButton">
-            <button> Buy now! </button> </a>
+            <a href="https://www.amazon.com/Happy-City-Transforming-Through-Design-ebook/dp/B009LRWHPY" style="text-decoration:none" class="booksBtn">BUY NOW </a>
     </div>
 
     <!-- body two for the take action page -->
@@ -104,8 +133,7 @@
              <p>  Caroline Criado Perez
              </p>
             <!-- button to link -->
-            <a href="https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419729071" class="infoButton">
-            <button> Buy now! </button> </a>
+            <a href="https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419729071" style="text-decoration:none" class="booksBtn">BUY NOW </a>
     </div>
 
     <!-- body three for the take action page -->
@@ -117,8 +145,7 @@
              <p>  placeholder
              </p>
             <!-- button to link -->
-            <a href="https://www.google.com" class="infoButton">
-            <button> Buy now! </button> </a>
+            <a href="https://www.google.com" style="text-decoration:none" class="booksBtn">BUY NOW</a> 
     </div>
     </div>
 
@@ -132,12 +159,12 @@
         <div class="logo-container">
            <img class="logo" src="logo_gender.png" width="70%">
         </div>
-            <a href="landingPageTina.html">HOME</a>
-            <a href="mapSania/mapSania.html">MAP</a>
-            <a href="impactPageAnge.html">IMPACT PAGE</a>
-            <a href="takeActionAnge.html">TAKE ACTION</a>
-            <a href="booksAnge.html">BOOKS</a>
-            <a href="aboutFuturaAnge.html">ABOUT FUTURA</a>
+            <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
+            <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
+            <a style="text-decoration:none" href="impactPageAnge.html">IMPACT PAGE</a>
+            <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
+            <a style="text-decoration:none" href="booksAnge.html">BOOKS</a>
+            <a style="text-decoration:none" href="aboutFuturaAnge.html">ABOUT FUTURA</a>
     </nav>
 </div>
 
