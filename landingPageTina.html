@@ -2,17 +2,35 @@
 <html>
 <head>
     <style>
-        .headingPage {
+        @font-face {
+        font-family: '';
+        src: url('GothicMB101Pro-Medium-AlphaNum.woff2') format('woff2'),
+            url('GothicMB101Pro-Medium-AlphaNum.woff') format('woff'),
+            url('GothicMB101Pro-Medium-AlphaNum.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+}
+        html {
+            background-color: #F8F1EA;
+            font-family: "a-otf-gothic-mb101-pr6n", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .headingLanding {
             width: 1000px;
             text-align: center;
+            margin-left: 190px;
         }
         .bodyParagraph {
             width: 1000px;
             text-align: center;
+            margin-left: 190px;
         }
         .bottomMsgs {
             width: 1000px;
             text-align: center;
+            margin-left: 190px;
         }
         .sidenav {
         height: 100%;
@@ -21,54 +39,66 @@
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #111;
+        background-color: #F8F1EA;
         overflow-x: hidden;
         padding-top: 20px;
         }
-
         .sidenav a {
         padding: 6px 6px 6px 32px;
         font-size: 25px;
         color: #818181;
         display: block;
         }
+        .logo-container {
+            float: left;
+            position: static;
+            margin: 10px 15px 15px 10px;
+        }
     </style>
 </head>
-
 <!-- the heading for the landing page --> 
-<div class="headingPage">
-    <h1> Futura</h1>
-</div>
+<div class="bodyContainer">
+    <div class="headingLanding">
+        <h1>Futura</h1>
+    </div>
 
-<!-- the body for the landing page -->
-<div class="bodyParagraph">
-    <h1> Welcome to futura </h1>
-         <p>  placeholder<br>placeholder<br>placeholder 
-             <br>placeholder<br>placeholder
-             <br>placeholder<br>placeholder
-             <br>placeholder<br>placeholder
-             <br>placeholder<br>placeholder
-         </p>
-    <a href="mapSania.html"
-    class="mapBtn">Show map!
-    </a>
-</div>
+    <!-- the body for the landing page -->
+    <div class="bodyParagraph">
+        <h1> Welcome to futura </h1>
+            <p>placeholder<br>placeholder<br>placeholder 
+            <br>placeholder<br>placeholder
+            <br>placeholder<br>placeholder
+            <br>placeholder<br>placeholder
+            <br>placeholder<br>placeholder
+            </p>
+        <!-- button to the map -->
+        <a href="mapSania.html"
+        class="mapBtn">
+            <button> Show map! </button>
+        </a>
+    </div>
 
-<!-- messages near the bottom of the screen -->
-<div class="bottomMsgs">
-    <h2> Reimagining urban design </h2>
-    <h2> Sustainability & gender equality </h2>
+    <!-- messages near the bottom of the screen -->
+    <div class="bottomMsgs">
+        <h2> Reimagining urban design </h2>
+        <h2> Sustainability & gender equality </h2>
+    </div>
 </div>
 
 <!-- nav bar -->
-<div class="sidenav">
-    <a href="#">Map</a>
-    <a href="#">Impact Page</a>
-    <a href="#">Books</a>
-    <a href="#">About Us</a>
-  </div>
-
-
+<div class="navBarContainer"> 
+    <nav class="sidenav">
+        <div class="logo-container">
+          <a href="landingPageTina.html"> <img class="logo" src="logo_gender.png" width="70%"> </a>
+        </div>
+        <a href="landingPageTina.html">Home</a>
+        <a href="mapSania.html">Map</a>
+        <a href="impactPageTina.html">Impact Page</a>
+        <a href="#">Take Action</a>
+        <a href="#">Books</a>
+        <a href="#">About Us</a>
+      </nav>
+</div>
 
 
 </html>
