@@ -20,20 +20,26 @@
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: #111;
+            background-color: #F8F1EA;
             overflow-x: hidden;
             padding-top: 20px;
         }
         .sidenav a {
-            padding: 6px 6px 6px 32px;
-            font-size: 25px;
-            color: #818181;
+            padding: 20px 6px 6px 32px;
+            font-size: 14px;
+            color: #111010;
             display: block;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #111010;
+            padding-bottom: 1;
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
         .logo-container {
-            float: left;
-            position: static;
-            margin: 10px 15px 15px 10px;
+            display: block;
+            margin-left: auto;
+            width: 80%;
         }
         .headerImage1 {
             float: center;
@@ -52,7 +58,14 @@
             position: static;
             margin-left: 200px;
         }
-        
+
+        .vl {
+            border-left: 2px solid #111010;
+            height: 100%;
+            position: absolute;
+            margin-left: 198px;
+            top: 0;
+        }
     </style>
 
 </head>
@@ -85,8 +98,9 @@
 <!-- nav bar -->
  <div class="navBarContainer"> 
      <nav class="sidenav">
+        <div class="vl"></div>
          <div class="logo-container">
-             <a href="landingPageTina.html"> <img class="logo" src="icons8_gender.png" width="100" height="100"> </a>
+            <img class="logo" src="logo_gender.png" width="70%">
          </div>
             <a href="landingPageTina.html">HOME</a>
             <a href="mapSania/mapSania.html">MAP</a>
