@@ -2,18 +2,22 @@
 <html>
 <head>
     <style>
-        @font-face {
-            font-family: '';
-            src: url('GothicMB101Pro-Medium-AlphaNum.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-        }
         html {
             background-color: #F8F1EA;
-            font-family: "a-otf-gothic-mb101-pr6n", sans-serif;
+            font-family: "halyard-display", sans-serif;
             font-weight: 400;
             font-style: normal;
+            background-color:hsla(189,24%,95%,1);
+            background-image:
+            radial-gradient(at 60% 50%, hsla(338,55%,82%,1) 0px, transparent 50%),
+            radial-gradient(at 25% 86%, hsla(36,86%,80%,1) 0px, transparent 50%),
+            radial-gradient(at 55% 10%, hsla(202,88%,83%,1) 0px, transparent 50%),
+            radial-gradient(at 80% 5%, hsla(32,100%,75%,1) 0px, transparent 50%),
+            radial-gradient(at 80% 46%, hsla(356,87%,73%,1) 0px, transparent 50%),
+            radial-gradient(at 30% 27%, hsla(333,74%,70%,1) 0px, transparent 50%);
+        
+        animation: gradient 5000ms ease infinite;
+            background-size: 200% 200%;
         }
         .headingLanding {
             width: 1000px;
@@ -27,8 +31,18 @@
         }
         .bottomMsgs {
             width: 1000px;
+            font-size: 40px;
             text-align: center;
             margin-left: 190px;
+        }
+        .mapBtn {
+            background-color: #FABE84;
+            color: black;
+            letter-spacing: 3px;
+            border: 2px solid black;
+            padding: 10px 20px 10px 20px;
+            border-radius: 50px;
+            font-size: 20px;
         }
         .sidenav {
             height: 100%;
@@ -65,6 +79,21 @@
             margin-left: 198px;
             top: 0;
         }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 20%;
+            }
+            25% {
+                background-position: 100% 50%;
+            }
+            50% {
+                background-position: 50% 70%;
+            }
+            100% {
+                background-position: 0% 20%;
+            }
+        }
     </style>
 
 <script>
@@ -81,7 +110,7 @@
 <!-- the heading for the landing page --> 
 <div class="bodyContainer">
     <div class="headingLanding">
-        <img class="logo" src="futuraTextLogo.png" width="70%">
+        <img class="logo" src="futuraTextOnly.png" width="15%">
     </div>
 
     <!-- the body for the landing page -->
@@ -94,16 +123,14 @@
             <br>placeholder<br>placeholder
             </p>
         <!-- button to the map -->
-        <a href="mapSania.html"
-        class="mapBtn">
-            <button> Show map! </button>
-        </a>
+        <a href="mapSania.html" style="text-decoration:none"
+        class="mapBtn">GO TO MAP</a>
     </div>
 
     <!-- messages near the bottom of the screen -->
     <div class="bottomMsgs">
-        <h2> Reimagining urban design </h2>
-        <h2> Sustainability & gender equality </h2>
+        <p> Reimagining urban design </p>
+        <p> Sustainability & gender equality </p>
     </div>
 </div>
 
