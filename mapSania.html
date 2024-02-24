@@ -1,16 +1,3 @@
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-  mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-  });
-</script>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +13,7 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 <style>
+
     #marker {
         background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
         background-size: cover;
@@ -44,28 +32,74 @@ body { margin: 0; padding: 0; }
 
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FuaWFoYXNhbiIsImEiOiJjbHQwNm5oMnQwa2x4MmltbnFlNDR1eXhhIn0.fGPH65FHLWTWBtssI4fZ9Q';
-    const monument = [-77.0353, 38.8895];
+    const washington = [-77.0091, 38.8898];
+    const boston = [-71.0571, 42.3611];
+    const philadelphia = [-75.1652, 39.9526];
+    const sanFran = [-122.431, 37.7739];
     const map = new mapboxgl.Map({
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/light-v11',
-        center: monument,
-        zoom: 15
+        center: washington,
+        zoom: 3
     });
 
     // create the popup
-    const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Construction on the Washington Monument began in 1848.'
+    const popup1 = new mapboxgl.Popup({ offset: 25 }).setText(
+        'Washington DC'
     );
 
+    // create the popup
+    const popup2 = new mapboxgl.Popup({ offset: 25 }).setText(
+        'Boston'
+    );
+
+     // create the popup
+    const popup3 = new mapboxgl.Popup({ offset: 25 }).setText(
+        'Philadelphia'
+    );
+
+     // create the popup
+     const popup4 = new mapboxgl.Popup({ offset: 25 }).setText(
+        'San Francisco'
+    );
+
+
     // create DOM element for the marker
-    const el = document.createElement('div');
-    el.id = 'marker';
+    const wash = document.createElement('div');
+    wash.id = 'marker';
+
+    const bos = document.createElement('div');
+    bos.id = 'marker';
+
+    const phil = document.createElement('div');
+    phil.id = 'marker';
+
+    const sf = document.createElement('div');
+    sf.id = 'marker';
 
     // create the marker
-    new mapboxgl.Marker(el)
-        .setLngLat(monument)
-        .setPopup(popup) // sets a popup on this marker
+    new mapboxgl.Marker(wash)
+        .setLngLat(washington)
+        .setPopup(popup1) // sets a popup on this marker
+        .addTo(map);
+
+    // create the marker
+    new mapboxgl.Marker(bos)
+        .setLngLat(boston)
+        .setPopup(popup2) // sets a popup on this marker
+        .addTo(map);
+
+    // create the marker
+    new mapboxgl.Marker(phil)
+        .setLngLat(philadelphia)
+        .setPopup(popup3) // sets a popup on this marker
+        .addTo(map);
+
+    // create the marker
+    new mapboxgl.Marker(sf)
+        .setLngLat(sanFran)
+        .setPopup(popup4) // sets a popup on this marker
         .addTo(map);
 </script>
 
