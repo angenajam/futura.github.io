@@ -3,18 +3,16 @@
 <head>
     <style>
         @font-face {
-        font-family: '';
-        src: url('GothicMB101Pro-Medium-AlphaNum.woff2') format('woff2'),
-            url('GothicMB101Pro-Medium-AlphaNum.woff') format('woff'),
-            url('GothicMB101Pro-Medium-AlphaNum.ttf') format('truetype');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-}
+            font-family: '';
+            src: url('GothicMB101Pro-Medium-AlphaNum.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
         html {
             background-color: #F8F1EA;
             font-family: "a-otf-gothic-mb101-pr6n", sans-serif;
-            font-weight: 300;
+            font-weight: 400;
             font-style: normal;
         }
         .headingLanding {
@@ -33,28 +31,52 @@
             margin-left: 190px;
         }
         .sidenav {
-        height: 100%;
-        width: 200px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #F8F1EA;
-        overflow-x: hidden;
-        padding-top: 20px;
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #F8F1EA;
+            overflow-x: hidden;
+            padding-top: 20px;
         }
         .sidenav a {
-        padding: 6px 6px 6px 32px;
-        font-size: 25px;
-        color: #818181;
-        display: block;
+            padding: 20px 6px 6px 32px;
+            font-size: 14px;
+            color: #111010;
+            display: block;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #111010;
+            padding-bottom: 1;
+            font-family: "halyard-display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
         .logo-container {
-            float: left;
-            position: static;
-            margin: 10px 15px 15px 10px;
+            display: block;
+            margin-left: auto;
+            width: 80%;
+        }
+        .vl {
+            border-left: 2px solid #111010;
+            height: 100%;
+            position: absolute;
+            margin-left: 198px;
+            top: 0;
         }
     </style>
+
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'oal3psp',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <!-- the heading for the landing page --> 
 <div class="bodyContainer">
@@ -88,15 +110,16 @@
 <!-- nav bar -->
 <div class="navBarContainer"> 
     <nav class="sidenav">
+        <div class="vl"></div>
         <div class="logo-container">
-          <a href="landingPageTina.html"> <img class="logo" src="logo_gender.png" width="70%"> </a>
+          <img class="logo" src="logo_gender.png" width="70%">
         </div>
-        <a href="landingPageTina.html">Home</a>
-        <a href="mapSania.html">Map</a>
-        <a href="impactPageTina.html">Impact Page</a>
-        <a href="#">Take Action</a>
-        <a href="#">Books</a>
-        <a href="#">About Us</a>
+        <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
+        <a style="text-decoration:none" href="mapSania.html">MAP</a>
+        <a style="text-decoration:none" href="impactPageTina.html">IMPACT</a>
+        <a style="text-decoration:none" href="#">TAKE ACTION</a>
+        <a style="text-decoration:none" href="#">BOOKS</a>
+        <a style="text-decoration:none" href="#">ABOUT US</a>
       </nav>
 </div>
 
