@@ -9,15 +9,27 @@
             background-color: #F8F1EA;
         }
          .headingImpact {
+            width: 100%;
             text-align: left;
-            margin-left: 100px;
+            margin-top: -40px;
+            margin-left: -10px;
+            padding-bottom: 0.5rem;
+            padding-top: 2.5rem;
+            padding-left: 2rem;
+            background: #F8F1EA;
+            border-bottom: 2px solid #111010;
         }
 
         .bodyContainerImpact {
             margin-left: 200px;
         }
+        
+        .headerImage1 {
+            margin-top: 50px;
+        }
 
         .image1creds {
+
             width: 1000px;
             text-align: left;
             margin-left: 100px;
@@ -39,15 +51,15 @@
             margin-left: 100px;
         }
         .sidenav {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #F8F1EA;
-            overflow-x: hidden;
-            padding-top: 20px;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #F8F1EA;
+        overflow-x: hidden;
+        padding-top: 20px;
         }
         .sidenav a {
             padding: 20px 6px 6px 32px;
@@ -55,16 +67,22 @@
             color: #111010;
             display: block;
             letter-spacing: 2px;
-            border-bottom: 2px solid #111010;
             padding-bottom: 1;
             font-family: "halyard-display", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
+        .underline {
+            background-color: transparent;
+            border-bottom: 2px solid black;
+            padding-bottom: 1.5px;
+        }
         .logo-container {
             display: block;
             margin-left: auto;
             width: 80%;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
         .headerImage1 {
             float: center;
@@ -74,9 +92,9 @@
         .imageCredit2 {
             display: grid;
             align-items: center;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 0fr 1fr;
             column-gap: 1px;
-            margin-left: 100px;
+            margin-left: 250px;
             color: #B2ABA4;
             text-align: left;
         }
@@ -84,6 +102,10 @@
             float: center;
             position: static;
             margin-left: 100px;
+        }
+
+        .imageColumn {
+            width: 400px;
         }
         
         .img3creds {
@@ -134,7 +156,7 @@
     <!-- body one for the landing page -->
     <div class="genderDataImpact">
         <h2> How does the gender-data gap impact urban design? </h2>
-             <p>  Urban planning is the process of designing and developing urban areas to meet the needs of a community, using the framework of land use, infrastructure, and human services to create fulfilling, livable, sustainable, efficient, and resilient cities. Urban planning and urban design would be nothing without the societal systems in place that enable the weaknesses of vulnerable cities. Architecture plays a large role in urban planning and design, and often, the blind client-designer dynamic contributes to the inefficiencies of building and urban design that fails to consider the needs of women and instead, build around the needs of men.
+             <p style="padding-bottom: 20px;">  Urban planning is the process of designing and developing urban areas to meet the needs of a community, using the framework of land use, infrastructure, and human services to create fulfilling, livable, sustainable, efficient, and resilient cities. Urban planning and urban design would be nothing without the societal systems in place that enable the weaknesses of vulnerable cities. Architecture plays a large role in urban planning and design, and often, the blind client-designer dynamic contributes to the inefficiencies of building and urban design that fails to consider the needs of women and instead, build around the needs of men.
                 For example, in Stockholm, a city that tends to receive copious amounts of snow, primarily targets snow-removal for roads instead of paths largely taken by women and children like entries to day cares, footpaths, and cycle paths. Thankfully, Stockholm took note of this issue and began to prioritize snow-plowing pavements. In Bangladesh, poor cyclone shelter design led to a death toll among women that was 5x higher than men due to its lack of sanitation facilities, ramps for pregnant women, and private spaces for lactating mothers. With cramped spaces, sexual harassment occurred, and women were discouraged from using such facilities which led to more death from cyclone and floors in 1991 (Sharmin & Islam, 2013).
              </p>
     </div>
@@ -155,7 +177,7 @@
     <div class="addressGap">
         <h2> How can we address the issue of the gender-data gap in 
             urban planning & design? </h2>
-             <p>  How can we address the gender-data gap in urban planning & design?
+             <p style="padding-bottom: 20px;">  How can we address the gender-data gap in urban planning & design?
                 Almost half of students in architectural programs in the US are women, yet they only make up 17% of registered architects (American Institute of Architects). Why is this important? Men and women interact with their environments in varying ways, meaning that they design spaces with different values and needs in mind; in other words, male domination in urban planning reflects a constructed environment where men’s needs are placed at the forefront!
                 <br>
                 <br>
@@ -176,7 +198,7 @@
     <!-- body three for the landing page -->
     <div class="ourImperative">
          <h2> Our Imperatives </h2>
-             <p>(1) Employers and policymakers must address the caregiving responsibilities of families that fall disproportionately on women
+             <p style="padding-bottom: 200px;">(1) Employers and policymakers must address the caregiving responsibilities of families that fall disproportionately on women
                 <br>
                 <br>
                 (2) Employers and policymakers can reduce gender and racial wage gaps by ensuring pay transparency, exploring wage floors, and addressing disparities in tipped versus non-tipped work
@@ -188,19 +210,19 @@
 </div>
     
 <!-- nav bar -->
- <div class="navBarContainer"> 
-     <nav class="sidenav">
+<div class="navBarContainer"> 
+    <nav class="sidenav">
         <div class="vl"></div>
         <div class="logo-container">
-           <img class="logo" src="logo_gender.png" width="70%">
+          <img class="logo" src="logo_gender.png" width="70%">
         </div>
-            <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
-            <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
-            <a style="text-decoration:none" href="impactPageAnge.html">IMPACT PAGE</a>
-            <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
-            <a style="text-decoration:none" href="booksAnge.html">BOOKS</a>
-            <a style="text-decoration:none" href="aboutFuturaAnge.html">ABOUT FUTURA</a>
-    </nav>
+        <a style="text-decoration:none" href="landingPageTina.html"><mark class="underline">HOME</mark></a>
+        <a style="text-decoration:none" href="mapSaidah.html"><mark class="underline">MAP</mark></a>
+        <a style="text-decoration:none" href="impactPageAnge.html"><mark class="underline">IMPACT</mark></a>
+        <a style="text-decoration:none" href="takeActionAnge.html"><mark class="underline">TAKE ACTION</mark></a>
+        <a style="text-decoration:none" href="booksAnge.html"><mark class="underline">BOOKS</mark></a>
+        <a style="text-decoration:none" href="aboutFuturaAnge.html"><mark class="underline">ABOUT FUTURA</mark></a>
+      </nav>
 </div>
 
 </div>

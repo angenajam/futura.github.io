@@ -5,72 +5,71 @@
 <meta charset="utf-8">
 <title>Mapbox Map</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
 <style>
-    body { margin: 0; padding: 0; }
-    #map { position: fixed; top: 0; bottom: 0; width: 100%; }
-</style>
-<script>
-    (function(d) {
-    var config = {
-        kitId: 'oal3psp',
-        scriptTimeout: 3000,
-        async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-</script>
-</head>
-<!--custom styles-->
-<!--<link rel="stylesheet" href="styles.css"-->
-</body>
-
-  <!-- the heading for the map page --> 
-<div class="bodyContainerMap">
-    <div class="headingMap">
-        <h1>The Promises and Pitfalls of Major U.S. Cities</h1>
-        <div class="description"> 
-        <p>Click on any image pinpoint to see the strengths, weaknesses, and points of improvement for the city.</p>
-    </div>
-    </div>
-
-   <!--nav bar-->
-   <div class="navBarContainer"> 
-    <nav class="sidenav">
-        <div class="vl"></div>
-        <div class="logo-container">
-          <img class="logo" src="logo_gender.png" width="70%">
-        </div>
-        <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
-        <a style="text-decoration:none" href="mapSaidah.html">MAP</a>
-        <a style="text-decoration:none" href="impactPageTina.html">IMPACT</a>
-        <a style="text-decoration:none" href="#">TAKE ACTION</a>
-        <a style="text-decoration:none" href="#">BOOKS</a>
-        <a style="text-decoration:none" href="#">ABOUT US</a>
-      </nav>
-</div>
-<main class="p-5">
-    <div class="container">
-       <div id="map"></div>
-</div>
-<style>
+    body {
+        margin: 0; padding: 0;
+    }
+    #map {
+        position: fixed; top: 0; bottom: 0; width: 100%;
+    }
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #F8F1EA;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .sidenav a {
+        padding: 20px 6px 6px 32px;
+        font-size: 14px;
+        color: #111010;
+        display: block;
+        letter-spacing: 2px;
+        padding-bottom: 1;
+        font-family: "halyard-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .underline {
+        background-color: transparent;
+        border-bottom: 2px solid black;
+        padding-bottom: 1.5px;
+    }
+    .logo-container {
+        display: block;
+        margin-left: auto;
+        width: 80%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
     html {
         font-family: "halyard-display", sans-serif;
         font-weight: 400;
         font-style: normal;
-        background-color: #ecded0;
+        background-color: #F8F1EA;
     }
 
     .headingMap {
-            margin-top: 10px;
-            padding-left: 170px;
-            text-align: center;
-            background-color: #ecded0;
-            padding-bottom: 50px;
-            line-height: 50%;
-        }
+        margin-top: 16px;
+        padding-left: 170px;
+        text-align: center;
+        background-color: #F8F1EA;
+        padding-bottom: 8px;
+        line-height: 50%;
+        font-family: "halyard-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1;
+        border-bottom: 2px solid #111010;
+    }
 
     .description {
         color: #c7a37f;
@@ -94,6 +93,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 2px solid black;
         cursor: pointer;
     }
     #marker2 {
@@ -102,6 +102,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 2px solid black;
         cursor: pointer;
     }
     #marker3 {
@@ -110,6 +111,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 2px solid black;
         cursor: pointer;
     }
     #marker4 {
@@ -118,6 +120,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 2px solid black;
         cursor: pointer;
     }
 
@@ -138,46 +141,90 @@
     .mapboxgl-popup-close-button {
         color: white !important;
     }
-
-    .sidenav {
+    .modalTitle {
+        font-family: "halyard-display", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 22px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .modalTable {
+        font-family: "halyard-display", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 16px;
+    }
+    .potentialImperatives {
+        font-family: "halyard-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        margin: 7.8rem 0 1rem 0rem;
+        border-top: 2px solid white;
+        padding-top: 1rem;
+    }
+    .vl {
+        border-left: 2px solid #111010;
         height: 100%;
-        width: 200px;
-        position: fixed;
-        z-index: 1;
+        position: absolute;
+        margin-left: 198px;
         top: 0;
-        left: 0;
-        background-color: #F8F1EA;
-        overflow-x: hidden;
-        padding-top: 20px;
-        }
-
-        .sidenav a {
-            padding: 20px 6px 6px 32px;
-            font-size: 14px;
-            color: #111010;
-            display: block;
-            letter-spacing: 2px;
-            border-bottom: 2px solid #111010;
-            padding-bottom: 1;
-            font-family: "halyard-display", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .logo-container {
-            display: block;
-            margin-left: auto;
-            width: 80%;
-        }
-        .vl {
-            border-left: 2px solid #111010;
-            height: 100%;
-            position: absolute;
-            margin-left: 198px;
-            top: 0;
-        }
-
+    }
+    ul {
+        text-align: left;
+        font-family: "halyard-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+    }
+    .material-symbols-outlined {
+       font-size: 1.4rem;
+    }
 </style>
+<script>
+    (function(d) {
+    var config = {
+        kitId: 'oal3psp',
+        scriptTimeout: 3000,
+        async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script>
+</head>
+<!--custom styles-->
+<!--<link rel="stylesheet" href="styles.css"-->
+</body>
+
+  <!-- the heading for the map page --> 
+<div class="bodyContainerMap">
+    <div class="headingMap">
+        <h1 style="font-size: 35px;">The Promises and Pitfalls of Major U.S. Cities</h1>
+        <div class="description"> 
+        <p>Click on any image pinpoint to see the strengths, weaknesses, and points of improvement for the city.</p>
+    </div>
+    </div>
+
+   <!--nav bar-->
+   <div class="navBarContainer"> 
+    <nav class="sidenav">
+        <div class="vl"></div>
+        <div class="logo-container">
+          <img class="logo" src="logo_gender.png" width="70%">
+        </div>
+        <a style="text-decoration:none" href="landingPageTina.html"><mark class="underline">HOME</mark></a>
+        <a style="text-decoration:none" href="mapSaidah.html"><mark class="underline">MAP</mark></a>
+        <a style="text-decoration:none" href="impactPageAnge.html"><mark class="underline">IMPACT</mark></a>
+        <a style="text-decoration:none" href="takeActionAnge.html"><mark class="underline">TAKE ACTION</mark></a>
+        <a style="text-decoration:none" href="booksAnge.html"><mark class="underline">BOOKS</mark></a>
+        <a style="text-decoration:none" href="aboutFuturaAnge.html"><mark class="underline">ABOUT FUTURA</mark></a>
+      </nav>
+    </div>
+<main class="p-5">
+    <div class="container">
+       <div id="map"></div>
+</div>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiemFocmF3aWJpc2FuYSIsImEiOiJjbHQwNG9yYnIwd2Q5MnFvMjR5dWxqNDRoIn0.gMheQ3adbPQdo_Qtc7r7Ag';
     const washington = [-77.0091, 38.8898];
@@ -195,22 +242,22 @@
 
     // create the popup
     const popup1 = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        '<h6>Washington DC</h6><table><tr><td><span>&#x2717;</span>Walkability  </td><td><span>&#10003;</span>Affordibility  </td></tr><tr><td><span>&#x2717;</span>Accessibility  </td><td><span>&#10003;</span>Accessibility  </td></tr></td><td><span>&#10003;</span>Diversity</table><h6>Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
+        '<h6 class="modalTitle">Washington DC</h6><table align="left" class="modalTable"><tr><td align="left"><span class="material-symbols-outlined">done</span>Walkability  </td><td align="left"><span class="material-symbols-outlined">close</span>Affordibility  </td></tr><tr><td align="left"><span class="material-symbols-outlined">done</span>Accessibility  </td><td align="left"><span class="material-symbols-outlined">close</span>Accessibility  </td></tr></td><td align="left"><span class="material-symbols-outlined">done</span>Diversity</table><h6 class="potentialImperatives">Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
     );
 
     // create the popup
     const popup2 = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        '<h6>Boston, MA</h6><table><tr><td><span>&#10003;</span>Walkability  </td><td><span>&#x2717;</span>Diversity  </td></tr><tr><td><span>&#10003;</span>Sustainability  </td><td><span>&#x2717;</span>Affordability  </td></tr></td><td><span>&#10003;</span>Accessibility</table><h6>Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
+        '<h6 class="modalTitle" >Boston, MA</h6><table align="left" class="modalTable"><tr><td align="left"><span class="material-symbols-outlined">done</span>Walkability  </td><td align="left"><span class="material-symbols-outlined">close</span>Diversity  </td></tr><tr><td align="left"><span class="material-symbols-outlined">done</span>Sustainability  </td><td align="left"><span class="material-symbols-outlined">close</span>Affordability  </td></tr></td><td align="left"><span class="material-symbols-outlined">done</span>Accessibility</table><h6 class="potentialImperatives">Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
     );
 
      // create the popup
     const popup3 = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        '<h6>Philadelphia, PA</h6><table><tr><td><span>&#10003;</span>Walkability  </td><td><span>&#x2717;</span>Sustainability  </td></tr><tr><td><span>&#10003;</span>Inclusivity  </td><td><span>&#x2717;</span>Accessibility  </td></tr></td><td><span>&#10003;</span>Diversity</table><h6>Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
+        '<h6 class="modalTitle" >Philadelphia, PA</h6><table align="left" class="modalTable"><tr><td align="left"><span class="material-symbols-outlined">done</span>Walkability  </td><td align="left"><span class="material-symbols-outlined">close</span>Sustainability  </td></tr><tr><td align="left"><span class="material-symbols-outlined">done</span>Inclusivity  </td><td align="left"><span class="material-symbols-outlined">close</span>Accessibility  </td></tr></td><td align="left"><span class="material-symbols-outlined">done</span>Diversity</table><h6 class="potentialImperatives">Potential Imperatives</h6><ul><li>Redesign bus network</li><li>Add more street lights</li><li>Widen sidewalks</li></ul>'
     );
 
      // create the popup
      const popup4 = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        '<h6>San Francisco, CA</h6><table><tr><td><span>&#10003;</span>Walkability  </td><td><span>&#x2717;</span>Affordabiity  </td></tr><tr><td><span>&#10003;</span>Sustainability  </td><td><span>&#x2717;</span>Accessibility  </td></tr></td><td><span>&#10003;</span>Diversity</table><h6>Potential Imperatives</h6><ul><li>Increase representation of women through art pieces, street names, and building names</li></ul>'
+        '<h6 class="modalTitle">San Francisco, CA</h6><table align="left" class="modalTable"><tr><td align="left"><span class="material-symbols-outlined">done</span>Walkability  </td><td align="left"><span class="material-symbols-outlined">close</span>Affordabiity  </td></tr><tr><td align="left"><span class="material-symbols-outlined">done</span>Sustainability  </td><td align="left"><span class="material-symbols-outlined">close</span>Accessibility  </td></tr></td><td align="left"><span class="material-symbols-outlined">done</span>Diversity</table><h6 class="potentialImperatives">Potential Imperatives</h6><ul><li>Increase representation of women through art pieces, street names, and building names</li></ul>'
     );
 
 
