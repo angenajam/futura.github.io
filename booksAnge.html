@@ -9,40 +9,58 @@
             background-color: #F8F1EA;
         }
          .headingBooks {
-            width: 1000px;
+            width: 1250;
             text-align: left;
-            margin-left: 100px;
+            margin-top: -40px;
+            margin-left: -10px;
+            padding-bottom: 0.5rem;
+            padding-top: 2.5rem;
+            padding-left: 2rem;
+            background: #F8F1EA;
+            border-bottom: 3px solid #111010;
         }
-
         
         .bodyContainerBooks {
             margin-left: 200px;
         }
 
         .bodyContainer {
+            margin-top: 50px;
             display: grid;
             align-items: center; 
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 1px; 
         }
         .booksBody1 {
+            border-radius: 25px;
+            border: 2px solid #111010;
+            padding: 2em 2em 2em 2em;
             width: 200px;
             text-align: center;
             margin-left: 100px;
         }
 
         .booksBody2 {
+            border-radius: 25px;
+            border: 2px solid #111010;
+            padding: 2em 2em 2em 2em;
             width: 200px;
             text-align: center;
             margin-left: 100px;
         }
 
         .booksBody3 {
+            border-radius: 25px;
+            border: 2px solid #111010;
+            padding: 2em 2em 2em 2em;
             width: 200px;
             text-align: center;
             margin-left: 100px;
         }
 
+        .author {
+            padding-bottom: 5px;
+        }
 
         .sidenav {
             height: 100%;
@@ -61,12 +79,17 @@
             color: #111010;
             display: block;
             letter-spacing: 2px;
-            border-bottom: 2px solid #111010;
             padding-bottom: 1;
             font-family: "halyard-display", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
+        .underline {
+            background-color: transparent;
+            border-bottom: 2px solid black;
+            padding-bottom: 1.5px;
+        }
+
         .logo-container {
             display: block;
             margin-left: auto;
@@ -120,10 +143,10 @@
     <!-- body one for the take action page -->
     <div class="booksBody1">
         <div class="image1">
-            <img class="img1" src="default_icon.png" width="100" height="75"> 
+            <img class="img1" src="happycitybook.jpg" width=100% height=100%> 
         </div>
         <h2> Happy City </h2>
-             <p>  Charles Montgomery
+             <div class="author"> <p>  Charles Montgomery </div>
              </p>
              <!-- button to link -->
             <a href="https://www.amazon.com/Happy-City-Transforming-Through-Design-ebook/dp/B009LRWHPY" style="text-decoration:none" class="booksBtn">BUY NOW </a>
@@ -132,10 +155,10 @@
     <!-- body two for the take action page -->
     <div class="booksBody2">
         <div class="image2">
-            <img class="img2" src="default_icon.png" width="100" height="75"> 
+            <img class="img2" src="invisiblewomen.jpg" width=100% height=100%> 
         </div>
         <h2> Invisible Women </h2>
-             <p>  Caroline Criado Perez
+            <div class="author"> <p>  Caroline Criado Perez </div>
              </p>
             <!-- button to link -->
             <a href="https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419729071" style="text-decoration:none" class="booksBtn">BUY NOW </a>
@@ -144,11 +167,11 @@
     <!-- body three for the take action page -->
     <div class="booksBody3">
         <div class="image3">
-            <img class="img3" src="default_icon.png" width="100" height="75"> 
+            <img class="img3" src="authoritygap.jpg" width=100% height=97%> 
         </div>
-        <h2> booksbody3 </h2>
-             <p>  placeholder
-             </p>
+        <h2> The Authority Gap </h2>
+        <div class="author"> <p>  Mary Ann Sieghart </div>
+        </p>
             <!-- button to link -->
             <a href="https://www.google.com" style="text-decoration:none" class="booksBtn">BUY NOW</a> 
     </div>
@@ -164,12 +187,12 @@
         <div class="logo-container">
            <img class="logo" src="logo_gender.png" width="70%">
         </div>
-            <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
-            <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
-            <a style="text-decoration:none" href="impactPageAnge.html">IMPACT PAGE</a>
-            <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
-            <a style="text-decoration:none" href="booksAnge.html">BOOKS</a>
-            <a style="text-decoration:none" href="aboutFuturaAnge.html">ABOUT FUTURA</a>
+            <a style="text-decoration:none" href="landingPageTina.html"><mark class="underline">HOME</mark></a>
+            <a style="text-decoration:none" href="mapSania/mapSania.html"><mark class="underline">MAP</mark></a>
+            <a style="text-decoration:none" href="impactPageAnge.html"><mark class="underline">IMPACT PAGE</mark></a>
+            <a style="text-decoration:none" href="takeActionAnge.html"><mark class="underline">TAKE ACTION</mark></a>
+            <a style="text-decoration:none" href="booksAnge.html"><mark class="underline">BOOKS</mark></a>
+            <a style="text-decoration:none" href="aboutFuturaAnge.html"><mark class="underline">ABOUT FUTURA</mark></a>
     </nav>
 </div>
 

@@ -9,9 +9,15 @@
             background-color: #F8F1EA;
         }
          .headingTakeAction {
-            width: 1000px;
+            width: 1400px;
             text-align: left;
-            margin-left: 100px;
+            margin-left: -10px;
+            border-bottom: 3px solid #111010;
+            margin-top: -40px;
+            padding-bottom: 0.5rem;
+            padding-left: 2rem;
+            padding-top: 2.5rem;
+            padding-right: -2rem;
         }
 
         .bodyContainer {
@@ -19,29 +25,38 @@
             align-items: center; 
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 1px; 
+            margin-top: 50px;
         }
         .takeActionBody1 {
             width: 200px;
             text-align: center;
             margin-left: 100px;
+            border-radius: 25px;
+            border: 2px solid #111010;
+            padding: 2em 2em 2em 2em;
         }
 
         .takeActionBody2 {
             width: 200px;
             text-align: center;
             margin-left: 100px;
+            border-radius: 25px;
+            border: 2px solid #111010;
+            padding: 2em 2em 2em 2em;
         }
 
         .takeActionBody3 {
             width: 200px;
             text-align: center;
             margin-left: 100px;
+            border-radius: 25px;
+            border: 2px solid #111010;
+            padding: 2em 2em 2em 2em;
         }
 
         .bodyContainerAction {
             margin-left: 200px;
         }
-
         .sidenav {
             height: 100%;
             width: 200px;
@@ -59,11 +74,15 @@
             color: #111010;
             display: block;
             letter-spacing: 2px;
-            border-bottom: 2px solid #111010;
             padding-bottom: 1;
             font-family: "halyard-display", sans-serif;
             font-weight: 400;
             font-style: normal;
+        }
+        .underline {
+            background-color: transparent;
+            border-bottom: 2px solid black;
+            padding-bottom: 1.5px;
         }
         .logo-container {
             display: block;
@@ -93,6 +112,7 @@
             color: white !important;
         }
         
+        
     </style>
 
     <script>
@@ -118,49 +138,40 @@
     <!-- body one for the take action page -->
     <div class="takeActionBody1">
         <div class="image1">
-            <img class="img1" src="default_icon.png" width="100" height="75"> 
+            <img class="img1" src="UNHabitat Logo.jpeg" width=90% height=165px>
         </div>
-        <h2> takeactionbody1 </h2>
-             <p>  placeholder<br>placeholder<br>placeholder 
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
+        <h2> UN-Habitat </h2>
+             <p>  UN-Habitat promotes gender equality in human settlements development through
+                 a variety of ways such as more diverse employment opportunities, better access to healthcare, and more!
              </p>
              <!-- button to link -->
-            <a href="https://www.google.com" style="text-decoration:none" class="takeActionBtn">LEARN MORE</a>
+            <a href="https://unhabitat.org/topic/gender" style="text-decoration:none" class="takeActionBtn">LEARN MORE</a>
     </div>
 
     <!-- body two for the take action page -->
     <div class="takeActionBody2">
         <div class="image2">
-            <img class="img2" src="default_icon.png" width="100" height="75"> 
+            <img class="img2" src="UNWomenInternational.png" width=100% height=155px>
         </div>
-        <h2> takeactionbody2 </h2>
-             <p>  placeholder<br>placeholder<br>placeholder 
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
+        <h2> Women In Cities International </h2>
+             <p> Women in Cities International works to create a more inclusive and equitable
+                 urban environments by advocating for women's rights and safety in cities.
              </p>
             <!-- button to link -->
-            <a href="https://www.google.com" style="text-decoration:none" class="takeActionBtn">LEARN MORE </a>
+            <a href="https://www.metropolis.org/alliances/women-cities-international-wici" style="text-decoration:none" class="takeActionBtn">LEARN MORE </a>
     </div>
 
     <!-- body three for the take action page -->
     <div class="takeActionBody3">
         <div class="image3">
-            <img class="img3" src="default_icon.png" width="100" height="75"> 
+            <img class="img3" src="wriRossCenter.jpeg" width=63% height=100%>
         </div>
-        <h2> takeactionbody3 </h2>
-             <p>  placeholder<br>placeholder<br>placeholder 
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
-                 <br>placeholder<br>placeholder
+        <h2> WRI Ross Center for Sustainable Cities </h2>
+             <p>  WRI Ross Center examines the impact of gender on urban mobility by ensuring
+                 that transportation systems are designed with women's safety and accessibility in mind.
              </p>
             <!-- button to link -->
-            <a href="https://www.google.com" style="text-decoration:none" class="takeActionBtn">LEARN MORE </a>
+            <a href="https://www.wri.org/cities" style="text-decoration:none" class="takeActionBtn">LEARN MORE </a>
     </div>
     </div>
 
@@ -168,19 +179,19 @@
 </div>
     
 <!-- nav bar -->
- <div class="navBarContainer"> 
-     <nav class="sidenav">
+<div class="navBarContainer"> 
+    <nav class="sidenav">
         <div class="vl"></div>
         <div class="logo-container">
-           <img class="logo" src="logo_gender.png" width="70%">
+          <img class="logo" src="logo_gender.png" width="70%">
         </div>
-            <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
-            <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
-            <a style="text-decoration:none" href="impactPageAnge.html">IMPACT PAGE</a>
-            <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
-            <a style="text-decoration:none" href="booksAnge.html">BOOKS</a>
-            <a style="text-decoration:none" href="aboutFuturaAnge.html">ABOUT FUTURA</a>
-    </nav>
+        <a style="text-decoration:none" href="landingPageTina.html"><mark class="underline">HOME</mark></a>
+        <a style="text-decoration:none" href="mapSaidah.html"><mark class="underline">MAP</mark></a>
+        <a style="text-decoration:none" href="impactPageAnge.html"><mark class="underline">IMPACT</mark></a>
+        <a style="text-decoration:none" href="takeActionAnge.html"><mark class="underline">TAKE ACTION</mark></a>
+        <a style="text-decoration:none" href="booksAnge.html"><mark class="underline">BOOKS</mark></a>
+        <a style="text-decoration:none" href="aboutFuturaAnge.html"><mark class="underline">ABOUT FUTURA</mark></a>
+      </nav>
 </div>
 
 </div>
