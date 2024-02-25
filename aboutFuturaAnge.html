@@ -9,13 +9,14 @@
             background-color: #F8F1EA;
         }
          .headingAbout {
-            width: 100%;
-            text-align: center;
-            margin-left: -8px;
-            margin-top: -10px;
-            padding-top: 2rem;
-            background: #F8F1EA;
             border-bottom: 2px solid #111010;
+            width: 1450px;
+            text-align: left;
+            margin-left: -10px;
+            margin-top: -40px;
+            padding-bottom: 0.5rem;
+            padding-left: 2rem;
+            padding-top: 2.5rem;
         }
         .genderDataImpact {
             width: 1000px;
@@ -24,12 +25,28 @@
             font-family: "halyard-display", sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: 18px
+            font-size: 18px;
             line-height: 1.8;
         }
         
         .bodyContainerAbout {
             margin-left: 200px;
+            align-items: left; 
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .row {
+        margin-top: 50px;
+        margin-left: 55px;
+        display: flex;
+        }
+
+        .column {
+        flex: 33.33%;
+        padding: 5px;
         }
 
         .sidenav {
@@ -49,11 +66,15 @@
             color: #111010;
             display: block;
             letter-spacing: 2px;
-            border-bottom: 2px solid #111010;
             padding-bottom: 1;
             font-family: "halyard-display", sans-serif;
             font-weight: 400;
             font-style: normal;
+        }
+        .underline {
+            background-color: transparent;
+            border-bottom: 2px solid black;
+            padding-bottom: 1.5px;
         }
         .logo-container {
             display: block;
@@ -61,6 +82,12 @@
             width: 80%;
         }
         .headerImage1 {
+            float: center;
+            position: static;
+            margin-left: 75px;
+            margin-top: 50px;
+        }
+        .headerImage2 {
             float: center;
             position: static;
             margin-left: 75px;
@@ -76,7 +103,21 @@
         .headerImage3 {
             float: center;
             position: static;
-            margin-left: 100px;
+            margin-left: 75px;
+            margin-top: 50px;
+        }
+
+        .headerImage4 {
+            float: center;
+            position: static;
+            margin-left: 75px;
+            margin-top: 50px;
+        }
+        .headerImage5 {
+            float: center;
+            position: static;
+            margin-left: 75px;
+            margin-top: 50px;
         }
 
         .vl {
@@ -98,6 +139,9 @@
             font-style: normal;
             font-size: 40px
         }
+        .header {
+            display:inline-block;
+        }
     </style>
 
     <script>
@@ -115,39 +159,54 @@
 
 <!-- the heading for the impact page --> 
 <div class="bodyContainerAbout">
+    
     <div class="headingAbout">
         <p class="aboutFutura">About Futura</p>
     </div>
-
-    <!-- imageCredit1 -->
-    <div class="headerImage1">
-        <img class="header" src="circle.png" width="200" height="200">
+    <div class="row"> 
+        <div class="column"> 
+            <img src="Artboard 1.png" style="width:100%">
+        </div>
+        <div class="column"> 
+            <img src="zahrapic.png" style="width:100%">
+        </div>
+        <div class="column"> 
+            <img src="saidah.png" style="width:100%">
+        </div>
+        <div class="column"> 
+            <img src="sania.png" style="width:100%">
+        </div>
+        <div class="column"> 
+            <img src="tina.png" style="width:100%">
+        </div>
     </div>
+
+
 
     <!-- body one for the landing page -->
     <div class="genderDataImpact">
         <h2> Introduction </h2>
-             <p>  Our team is composed of four students from Northeastern University.
-             </p>
+             <p>  Hello! Our team is composed of five students from Northeastern University majoring in computer science. 
+                We are Ange, Zahra, Saidah, Sania, and Tina (left to right).
+                As our first hackathon project together, we wanted to highlight the inequalities that women face as a result of urban design, specifically in major cities.
+                Our hopes for this project are to spread awareness surrounding the gender data gap and foster conversation about societal gender norms. 
     </div>
 
-
-</div>
     
 <!-- nav bar -->
- <div class="navBarContainer"> 
-     <nav class="sidenav">
+<div class="navBarContainer"> 
+    <nav class="sidenav">
         <div class="vl"></div>
-         <div class="logo-container">
-            <img class="logo" src="logo_gender.png" width="70%">
-         </div>
-            <a style="text-decoration:none" href="landingPageTina.html">HOME</a>
-            <a style="text-decoration:none" href="mapSania/mapSania.html">MAP</a>
-            <a style="text-decoration:none" href="impactPageAnge.html">IMPACT PAGE</a>
-            <a style="text-decoration:none" href="takeActionAnge.html">TAKE ACTION</a>
-            <a style="text-decoration:none" href="booksAnge.html">BOOKS</a>
-            <a style="text-decoration:none" href="aboutFuturaAnge.html">ABOUT FUTURA</a>
-    </nav>
+        <div class="logo-container">
+          <img class="logo" src="logo_gender.png" width="70%">
+        </div>
+        <a style="text-decoration:none" href="landingPageTina.html"><mark class="underline">HOME</mark></a>
+        <a style="text-decoration:none" href="mapSaidah.html"><mark class="underline">MAP</mark></a>
+        <a style="text-decoration:none" href="impactPageAnge.html"><mark class="underline">IMPACT</mark></a>
+        <a style="text-decoration:none" href="takeActionAnge.html"><mark class="underline">TAKE ACTION</mark></a>
+        <a style="text-decoration:none" href="booksAnge.html"><mark class="underline">BOOKS</mark></a>
+        <a style="text-decoration:none" href="aboutFuturaAnge.html"><mark class="underline">ABOUT FUTURA</mark></a>
+      </nav>
 </div>
 
 </div>
